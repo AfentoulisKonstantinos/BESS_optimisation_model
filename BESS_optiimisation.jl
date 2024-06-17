@@ -4,7 +4,7 @@ using CSV, DataFrames, Dates, JuMP, HiGHS
 date_format = DateFormat("dd/mm/yy HH:MM")
 
 # Load the data from the CSV file
-HourlyData = CSV.read("half_hourly_data_for_all_markets copy.csv", DataFrame)
+HourlyData = CSV.read("half_hourly_data_for_all_markets.csv", DataFrame)
 HourlyData.timestamp = [DateTime(row.timestamp, date_format) for row in eachrow(HourlyData)]
 
 # Get unique dates
