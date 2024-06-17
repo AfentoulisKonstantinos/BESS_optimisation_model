@@ -1,6 +1,6 @@
 using CSV, DataFrames, Dates, JuMP, HiGHS
 
-# Define a custom date format
+# Define the date format
 date_format = DateFormat("dd/mm/yy HH:MM")
 
 # Load the data from the CSV file
