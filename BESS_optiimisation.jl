@@ -182,9 +182,9 @@ for d in days
 
     storage_results = [value(storage_level[d, t]) for t in time_hours]
 
-    profit_result = 0.5 * [(value(discharging_power_m1[d, t]) * discharging_efficiency - value(charging_power_m1[d, t]) * charging_efficiency) * HourlyData[(d-1)*48 + t, :Market1Price] +
-                           (value(discharging_power_m2[d, t]) * discharging_efficiency - value(charging_power_m2[d, t]) * charging_efficiency) * HourlyData[(d-1)*48 + t, :Market2Price] +
-                           (value(discharging_power_m3[d, t]) * discharging_efficiency - value(charging_power_m3[d, t]) * charging_efficiency) * HourlyData[(d-1)*48 + t, :Market3Price] for t in time_hours]
+    profit_result = 0.5 * [(value(discharging_power_m1[d, t]) * discharging_efficiency - value(charging_power_m1[d, t]) / charging_efficiency) * HourlyData[(d-1)*48 + t, :Market1Price] +
+                           (value(discharging_power_m2[d, t]) * discharging_efficiency - value(charging_power_m2[d, t]) / charging_efficiency) * HourlyData[(d-1)*48 + t, :Market2Price] +
+                           (value(discharging_power_m3[d, t]) * discharging_efficiency - value(charging_power_m3[d, t]) / charging_efficiency) * HourlyData[(d-1)*48 + t, :Market3Price] for t in time_hours]
 
     ## Calculate cumulative charged and discharged power
     global cumulative_charged_power += sum(value.(charging_power[d, :])) 
