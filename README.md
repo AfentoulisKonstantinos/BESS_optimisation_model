@@ -8,12 +8,7 @@ The degradation cost of the BESS is 100£ per cycle. Thus, the degradation cost 
 - Install [Julia v1.10.4](https://julialang.org/downloads/platform/)
 - Install Julia packages:
     ```
-    using Pkg
-    Pkg.add("CSV")
-    Pkg.add("DataFrames")
-    Pkg.add("Dates")
-    Pkg.add("JuMP")
-    Pkg.add("HiGHS")
+    julia setup.jl
     ```
 
 ## Run
