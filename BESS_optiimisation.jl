@@ -67,7 +67,6 @@ daily_settlement_periods = count(row -> Date(row.timestamp) == unique_dates[1], 
 # Define the set of time periods and days
 time_hours = 1:48#daily_settlement_periods 
 
-#time_hours = collect(1:count(row -> Date(row.timestamp) == unique_dates[1], eachrow(HourlyData)))
 print("time_hours", time_hours, "daily_settlement_periods : ", daily_settlement_periods)
 days = 1:length(unique_dates)
 
