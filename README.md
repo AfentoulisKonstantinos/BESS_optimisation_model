@@ -21,7 +21,7 @@ The degradation cost of the BESS is 100£ per cycle. Thus, the degradation cost 
 ``` 
 git clone https://github.com/AfentoulisKonstantinos/BESS_optimisation_model
 cd BESS_optimisation_model
-julia BESS_optimisation.jl
+julia BESS_optimiisation.jl
 ```
 
 ## Contact
