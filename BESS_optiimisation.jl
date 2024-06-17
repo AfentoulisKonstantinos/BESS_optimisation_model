@@ -65,7 +65,7 @@ set_optimizer_attribute(model, "time_limit", 100.0)
 daily_settlement_periods = count(row -> Date(row.timestamp) == unique_dates[1], eachrow(HourlyData))
 
 # Define the set of time periods and days
-time_hours = 1:48 
+time_hours = 1:daily_settlement_periods 
 
 print("time_hours", time_hours, "daily_settlement_periods : ", daily_settlement_periods)
 days = 1:length(unique_dates)
