@@ -139,7 +139,7 @@ days = 1:length(unique_dates)
 @constraint(model, [d in days, t in time_hours], charging_power[d, t] <= max_charge_rate * charge_decision[d, t])
 @constraint(model, [d in days, t in time_hours], discharging_power[d, t] <= max_discharge_rate * discharge_decision[d, t])
 
-## Set the maximum charging rate 
+## Set the minimum charging rate 
 @constraint(model, [d in days, t in time_hours], charging_power[d, t] >= min_charge_rate * charge_decision[d, t])
 @constraint(model, [d in days, t in time_hours], discharging_power[d, t] >= min_discharge_rate * discharge_decision[d, t])
 
